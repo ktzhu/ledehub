@@ -1,0 +1,39 @@
+<head>
+	
+	<title>FBI Crime Categories -- ONA 2011 Example</title>
+	
+	<link type="text/css" href="crime-stats.css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    
+	
+	<script type="text/javascript" src="crime-categories.json"></script>
+	<script type="text/javascript" src="crime-stats.js"></script>
+	
+</head>
+	
+<body>
+	
+	<div class="hed">How have crime incidents changed in your state?</div>
+	
+	<div class="descripText">How many car thefts occurred in your state in the last year?  How does that compare to burglaries?  
+		While it's hard to get exact numbers, as various agencies report them a bit differently, statistics released in mid-September 2011 by the 
+		<a href="http://www.fbi.gov" target="_blank">Federal Bureau of Investigation</a> start to give us a clue into the breakdown of crimes in 2010, 
+		and how that compares to 2009.  Select your state, and then mouse over the various portions of the graph for more details.  The dataset used may 
+		be found <a href="http://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2010/crime-in-the-u.s.-2010/tables/10tbl04.xls" target="_blank">here</a>.
+		</div>
+	
+	<div id="state-form-intro">Go to a state:</div>
+	<form class="state-form">
+		<select id="states">
+		</select>
+	</form>
+	
+	<div id='stacked_bar_chart'></div>
+	<div class="disclaimer"></div>
+	
+</body>
